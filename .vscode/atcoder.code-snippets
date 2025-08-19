@@ -1,0 +1,15 @@
+{
+  "C++ Competitive Programming Template": {
+    "prefix": "atcodermain",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "",
+      "    return 0;",
+      "}"
+    ],
+    "description": "A basic C++ template for competitive programming"
+  }
+}
