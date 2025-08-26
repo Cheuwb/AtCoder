@@ -1,6 +1,6 @@
 {
   "C++ Competitive Programming Template": {
-    "prefix": "contestblock",
+    "prefix": "contestsmain",
     "body": [
       "#include <bits/stdc++.h>",
       "using namespace std;",
