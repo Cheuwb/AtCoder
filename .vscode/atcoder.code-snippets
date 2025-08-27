@@ -1,11 +1,13 @@
 {
   "C++ Competitive Programming Template": {
-    "prefix": "contestsmain",
+    "prefix": "atcodercontest",
     "body": [
       "#include <bits/stdc++.h>",
       "using namespace std;",
       "",
       "int main() {",
+      "    ios::sync_with_stdio(false);",
+      "    cin.tie(nullptr);",
       "",
       "    return 0;",
       "}"

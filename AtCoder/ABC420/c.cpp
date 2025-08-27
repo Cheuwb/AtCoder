@@ -2,7 +2,7 @@
 using namespace std;
 
 //ABC420 - C, Sum of Min Query
-int minSum(const vector<int>& A, const vector<int>&B, int Nlegnth);
+long long minSum(const vector<int>& A, const vector<int>&B, int Nlegnth);
 
 int main() {
     int Nlength;
@@ -21,6 +21,8 @@ int main() {
         cin >> Bsequence[i];
     }
 
+    long long sum = minSum(Asequence, Bsequence, Nlength);
+
     // for each query, read in the query
     // process into the sequence
     // calculate using the min sum function
@@ -30,22 +32,26 @@ int main() {
         int V;
         cin >> C >> X >> V;
 
+        int oldMin = min(Asequence[X-1], Bsequence[X-1]);
+
         if (C == "A") {
-            // changes to sequene A
             Asequence[X-1] = V;
         } else {
-            // changes to sequence B
             Bsequence[X-1] = V;
         }
-        // calculate the minimumSum after sequence change
-        cout << minSum(Asequence, Bsequence, Nlength) << endl;
+
+        int newMin = min(Asequence[X-1], Bsequence[X-1]);
+
+        sum += newMin - oldMin;
+
+        cout << sum << endl;
     }
 
     return 0;
 }
 
-int minSum(const vector<int>& A, const vector<int>&B, int Nlength) {
-    int minSum = 0;
+long long minSum(const vector<int>& A, const vector<int>&B, int Nlength) {
+    long long minSum = 0;
     for (int n = 0; n < Nlength; ++n) {
         minSum += min(A[n], B[n]);
     }
