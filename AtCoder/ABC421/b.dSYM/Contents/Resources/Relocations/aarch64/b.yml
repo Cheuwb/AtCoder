@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/briancheu/cpp/AtCoder/ABC421/b'
+relocations:     []
+...
